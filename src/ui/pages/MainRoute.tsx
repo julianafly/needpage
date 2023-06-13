@@ -13,6 +13,7 @@ import { settingsActions } from '../state/settings/reducer';
 import { useWallet } from '../utils';
 import AddKeyringScreen from './Account/AddKeyringScreen';
 import CreateAccountScreen from './Account/CreateAccountScreen';
+import SelectPhraseLengthScreen from './Account/SelectPhraseLengthScreen';
 import CreateHDWalletScreen from './Account/CreateHDWalletScreen';
 import CreatePasswordScreen from './Account/CreatePasswordScreen';
 import CreateSimpleWalletScreen from './Account/CreateSimpleWalletScreen';
@@ -75,6 +76,10 @@ const routes = {
   SettingsTabScreen: {
     path: '/settings',
     element: <SettingsTabScreen />
+  },
+  SelectPhraseLengthScreen: {
+    path: '/account/select-phrase-length',
+    element: <SelectPhraseLengthScreen />
   },
   CreateHDWalletScreen: {
     path: '/account/create-hd-wallet',

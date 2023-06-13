@@ -28,7 +28,7 @@ export default function WelcomeScreen() {
               onClick={async () => {
                 const isBooted = await wallet.isBooted();
                 if (isBooted) {
-                  navigate('CreateHDWalletScreen', { isImport: false });
+                  navigate('SelectPhraseLengthScreen', { isImport: false });
                 } else {
                   navigate('CreatePasswordScreen', { isNewAccount: true });
                 }
@@ -40,7 +40,7 @@ export default function WelcomeScreen() {
               onClick={async () => {
                 const isBooted = await wallet.isBooted();
                 if (isBooted) {
-                  navigate('CreateHDWalletScreen', { isImport: true });
+                  navigate('SelectPhraseLengthScreen', { isImport: true });
                 } else {
                   navigate('CreatePasswordScreen', { isNewAccount: false });
                 }
