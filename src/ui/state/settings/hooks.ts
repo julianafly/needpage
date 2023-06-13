@@ -69,7 +69,7 @@ export function useBlockstreamUrl() {
   if (networkType === NetworkType.MAINNET) {
     return 'https://explorer.litecoin.net/';
   } else {
-    return 'https://explorer.litecoin.net/testnet';
+    return 'https://blockexplorer.one/litecoin/testnet/';
   }
 }
 
@@ -78,7 +78,7 @@ export function useTxIdUrl(txid: string) {
   if (networkType === NetworkType.MAINNET) {
     return `https://explorer.litecoin.net/tx/${txid}`;
   } else {
-    return `https://explorer.litecoin.net/tx/${txid}`;
+    return `https://blockexplorer.one/litecoin/testnet/tx/${txid}`;
   }
 }
 
