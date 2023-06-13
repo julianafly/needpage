@@ -544,10 +544,10 @@ export default function CreateHDWalletScreen() {
   const navigate = useNavigate();
 
   const { state } = useLocation();
-  const { isImport, fromUnlock, words } = state as {
+  const { isImport, fromUnlock, words = 12 } = state as {
     isImport: boolean;
     fromUnlock: boolean;
-    words: number;
+    words?: number;
   };
 
   const [contextData, setContextData] = useState<ContextData>({

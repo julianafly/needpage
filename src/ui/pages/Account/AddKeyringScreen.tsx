@@ -19,7 +19,7 @@ export default function AddKeyringScreen() {
           <Card
             justifyCenter
             onClick={(e) => {
-              navigate('CreateHDWalletScreen', { isImport: false, words: 12 });
+              navigate('CreateHDWalletScreen', { isImport: false });
             }}>
             <Column full justifyCenter>
               <Text text="Create with mnemonics (12-words)" size="sm" />
@@ -41,7 +41,7 @@ export default function AddKeyringScreen() {
           <Card
             justifyCenter
             onClick={(e) => {
-              navigate('CreateHDWalletScreen', { isImport: true, words: 12 });
+              navigate('CreateHDWalletScreen', { isImport: true });
             }}>
             <Column full justifyCenter>
               <Text text="Restore from mnemonics (12-words)" size="sm" />
