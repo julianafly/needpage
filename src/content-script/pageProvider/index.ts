@@ -12,14 +12,14 @@ import { $, domReadyCall } from './utils';
 const log = (event, ...args) => {
   if (process.env.NODE_ENV !== 'production') {
     console.log(
-      `%c [unisat] (${new Date().toTimeString().slice(0, 8)}) ${event}`,
+      `%c [unilit] (${new Date().toTimeString().slice(0, 8)}) ${event}`,
       'font-weight: 600; background-color: #7d6ef9; color: white;',
       ...args
     );
   }
 };
 const script = document.currentScript;
-const channelName = script?.getAttribute('channel') || 'UNISAT';
+const channelName = script?.getAttribute('channel') || 'UNILIT';
 
 export interface Interceptor {
   onRequest?: (data: any) => any;
@@ -236,6 +236,8 @@ export class UnisatProvider extends EventEmitter {
     });
   };
 
+  sendLitecoin = this.sendBitcoin;
+
   sendInscription = async (toAddress: string, inscriptionId: string, options?: { feeRate: number }) => {
     return this._request({
       method: 'sendInscription',
@@ -312,23 +314,23 @@ export class UnisatProvider extends EventEmitter {
 
 declare global {
   interface Window {
-    unisat: UnisatProvider;
+    unilit: UnisatProvider;
   }
 }
 
 const provider = new UnisatProvider();
 
-if (!window.unisat) {
-  window.unisat = new Proxy(provider, {
+if (!window.unilit) {
+  window.unilit = new Proxy(provider, {
     deleteProperty: () => true
   });
 }
 
-Object.defineProperty(window, 'unisat', {
+Object.defineProperty(window, 'unilit', {
   value: new Proxy(provider, {
     deleteProperty: () => true
   }),
   writable: false
 });
 
-window.dispatchEvent(new Event('unisat#initialized'));
+window.dispatchEvent(new Event('unilit#initialized'));
