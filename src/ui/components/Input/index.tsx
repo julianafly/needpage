@@ -1,5 +1,5 @@
 import bitcore from 'bitcore-lib';
-import WAValidator from 'multicoin-address-validator'
+import WAValidator from 'multicoin-address-validator';
 import React, { CSSProperties, useEffect, useState } from 'react';
 
 import { SATS_DOMAIN, UNISAT_DOMAIN } from '@/shared/constant';
@@ -46,7 +46,7 @@ const $baseContainerStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
-  backgroundColor: '#2a2626',
+  backgroundColor: '#0c1117',
   paddingLeft: 15.2,
   paddingRight: 15.2,
   paddingTop: 11,

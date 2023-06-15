@@ -18,10 +18,10 @@ module.exports = {
         footer: '0px -10px 20px rgba(0, 0, 0, 0.2)'
       },
       colors: {
-        primary: 'rgb(45,135,246)',
-        'primary-active': '#383535',
-        'hard-black': '#1C1919',
-        'soft-black': '#2A2626',
+        primary: '2d87f6',
+        'primary-active': '#35373b',
+        'hard-black': '#191a1c',
+        'soft-black': '#171a1f',
         'soft-white': '#AAAAAA',
         'custom-green': '#4BB21A',
         'custom-green-rgba': 'rgba(75, 178, 26, 0.05)',

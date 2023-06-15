@@ -355,7 +355,7 @@ export default function MultiSignPsbt({
 
               <Section title="NETWORK FEE RATE:">
                 <Text text={decodedPsbt.feeRate.toString()} />
-                <Text text="sat/vB" color="textDim" />
+                <Text text="lit/vB" color="textDim" />
               </Section>
             </Column>
           )}

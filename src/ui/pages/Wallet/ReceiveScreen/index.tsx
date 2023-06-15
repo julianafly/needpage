@@ -10,6 +10,17 @@ export default function ReceiveScreen() {
   const currentAccount = useCurrentAccount();
   const address = useAccountAddress();
 
+  const qrCodeOptions = {
+    renderAs: 'svg',
+    size: sizes.qrcode,
+    imageSettings: {
+      src: 'https://litescribe.io/images/app-litescribe.png', // Replace with the URL of your image
+      height: 45, // Adjust the size of the logo as needed
+      width: 45,
+      excavate: false // This removes the dark squares in the QR code where the logo is placed
+    }
+  };
+
   return (
     <Layout>
       <Header
@@ -24,7 +35,12 @@ export default function ReceiveScreen() {
             justifyCenter
             rounded
             style={{ backgroundColor: 'white', alignSelf: 'center', alignItems: 'center', padding: 10 }}>
-            <QRCode value={address || ''} renderAs="svg" size={sizes.qrcode}></QRCode>
+            <QRCode
+              value={address || ''}
+              renderAs={'svg' as const} // Specify the type as "svg"
+              size={qrCodeOptions.size}
+              imageSettings={qrCodeOptions.imageSettings}
+            />
           </Column>
 
           <Row justifyCenter>
