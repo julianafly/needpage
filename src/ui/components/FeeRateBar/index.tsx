@@ -86,7 +86,7 @@ export function FeeRateBar({ onChange }: { onChange: (val: number) => void }) {
               <Text text={v.title} textCenter style={{ color: selected ? colors.black : colors.white }} />
               {v.title !== 'Custom' && (
                 <Text
-                  text={`${v.feeRate} sat/vB`}
+                  text={`${v.feeRate} lit/vB`}
                   size="xxs"
                   textCenter
                   style={{ color: selected ? colors.black : colors.white }}
@@ -107,7 +107,7 @@ export function FeeRateBar({ onChange }: { onChange: (val: number) => void }) {
       {feeOptionIndex === FeeRateType.CUSTOM && (
         <Input
           preset="amount"
-          placeholder={'sat/vB'}
+          placeholder={'lit/vB'}
           value={feeRateInputVal}
           onChange={async (e) => {
             adjustFeeRateInput(e.target.value);

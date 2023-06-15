@@ -106,16 +106,16 @@ export default function InscriptionPreview({ data, onClick, preset }: Inscriptio
           <Row style={{ flex: 1 }} />
           <Row fullX justifyEnd mb="sm">
             <Tooltip
-              title={`The UTXO containing this inscription has ${data.outputValue} sats`}
+              title={`The UTXO containing this inscription has ${data.outputValue} lits`}
               overlayStyle={{
                 fontSize: fontSizes.xs
               }}>
               <div>
                 <Text
-                  text={`${data.outputValue} sats`}
+                  text={`${data.outputValue} lits`}
                   size="xs"
                   style={{
-                    backgroundColor: 'rgba(255,255,255,0.2)',
+                    backgroundColor: '#212f40',
                     padding: 2,
                     borderRadius: 5,
                     paddingLeft: 4,
@@ -128,8 +128,8 @@ export default function InscriptionPreview({ data, onClick, preset }: Inscriptio
           </Row>
         </Column>
       </div>
-      <Column px="md" py="sm" gap="zero" bg="bg4" full>
-        <Text text={numberStr} color="gold" size={$numberPresets[preset] as any} />
+      <Column px="md" py="sm" gap="zero" bg="bg5" full>
+        <Text text={numberStr} color="white" size={$numberPresets[preset] as any} />
         {isUnconfirmed == false && <Text text={time} preset="sub" size={$timePresets[preset] as any} />}
       </Column>
     </Column>

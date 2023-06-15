@@ -15,7 +15,7 @@ function MintItem({ info }: { info: InscriptionMintedItem }) {
 
         <Text
           text="More"
-          color="blue_pastel"
+          color="gold"
           onClick={() => {
             window.open('https://ordinalslite.com/');
           }}

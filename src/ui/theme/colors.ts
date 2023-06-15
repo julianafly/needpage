@@ -11,14 +11,14 @@ const palette = {
   grey: '#495361',
   light: '#A2A4AA',
 
-  black_dark: '#2a2626',
+  black_dark: '#0c1117',
 
   green_dark: '#379a29',
   green: '#41B530',
   green_light: '#5ec04f',
 
   blues_dark: '#62A8D2',
-  blues: 'rgb(71,138,253)',
+  blues: '#3160b0',
   blues_light: '#26A9FC',
 
   red_dark: '#c92b40',
@@ -33,7 +33,7 @@ const palette = {
   blue_pastel: '#4A98DB',
   blue_pastel_light: '#57B2FF',
 
-  gold: '#2d87f6'
+  gold: '#718091'
 };
 
 export const colors = Object.assign({}, palette, {
@@ -49,13 +49,14 @@ export const colors = Object.assign({}, palette, {
 
   danger: palette.red,
 
-  card: '#262222',
+  card: '#0c1117',
   warning: palette.blue_pastel,
   primary: palette.blues,
 
-  bg2: '#2a2a2a',
+  bg2: '#0c1117',
   bg3: '#434242',
-  bg4: '#383535',
+  bg4: '#35373b',
+  bg5: '#212f40',
 
   border: 'rgba(255,255,255,0.1)'
 });

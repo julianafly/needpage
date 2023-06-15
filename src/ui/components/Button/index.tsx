@@ -98,7 +98,7 @@ const $viewPresets = {
 
 const $hoverViewPresets: Record<Presets, CSSProperties> = {
   default: {
-    backgroundColor: '#383535'
+    backgroundColor: '#35373b'
   },
   primary: {
     backgroundColor: colors.blues_dark
@@ -107,7 +107,7 @@ const $hoverViewPresets: Record<Presets, CSSProperties> = {
     backgroundColor: colors.red_dark
   },
   bar: {
-    backgroundColor: '#383535'
+    backgroundColor: '#35373b'
   }
 };
 

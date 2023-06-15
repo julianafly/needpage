@@ -69,7 +69,7 @@ export function useBlockstreamUrl() {
   if (networkType === NetworkType.MAINNET) {
     return 'https://explorer.litecoin.net/';
   } else {
-    return 'https://blockexplorer.one/litecoin/testnet/';
+    return 'https://blockexplorer.one/litecoin/testnet';
   }
 }
 

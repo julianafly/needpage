@@ -583,7 +583,7 @@ export default function SignPsbt({
               {canChanged == false && (
                 <Section title="NETWORK FEE RATE:">
                   <Text text={txInfo.decodedPsbt.feeRate.toString()} />
-                  <Text text="sat/vB" color="textDim" />
+                  <Text text="lit/vB" color="textDim" />
                 </Section>
               )}
             </Column>
