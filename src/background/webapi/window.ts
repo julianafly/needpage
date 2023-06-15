@@ -28,50 +28,55 @@ const WINDOW_SIZE = {
 };
 
 const create = async ({ url, ...rest }): Promise<number | undefined> => {
-  const {
-    top: cTop,
-    left: cLeft,
-    width
-  } = await browserWindowsGetCurrent({
-    windowTypes: ['normal']
-  } as any);
+  try {
+    const {
+      top: cTop,
+      left: cLeft,
+      width
+    } = await browserWindowsGetCurrent({
+      windowTypes: ['normal']
+    } as any);
 
-  const top = cTop! + BROWSER_HEADER;
-  const left = cLeft! + width! - WINDOW_SIZE.width;
+    const top = cTop! + BROWSER_HEADER;
+    const left = cLeft! + width! - WINDOW_SIZE.width;
 
-  const currentWindow = await browserWindowsGetCurrent();
-  let win;
-  if (currentWindow.state === 'fullscreen') {
-    // browser.windows.create not pass state to chrome
-    win = await browserWindowsCreate({
-      focused: true,
-      url,
-      type: 'popup',
-      ...rest,
-      width: undefined,
-      height: undefined,
-      left: undefined,
-      top: undefined,
-      state: 'fullscreen'
-    });
-  } else {
-    win = await browserWindowsCreate({
-      focused: true,
-      url,
-      type: 'popup',
-      top,
-      left,
-      ...WINDOW_SIZE,
-      ...rest
-    });
+    const currentWindow = await browserWindowsGetCurrent();
+    let win;
+    if (currentWindow.state === 'fullscreen') {
+      // browser.windows.create not pass state to chrome
+      win = await browserWindowsCreate({
+        focused: true,
+        url,
+        type: 'popup',
+        ...rest,
+        width: undefined,
+        height: undefined,
+        left: undefined,
+        top: undefined,
+        state: 'fullscreen'
+      });
+    } else {
+      win = await browserWindowsCreate({
+        focused: true,
+        url,
+        type: 'popup',
+        top,
+        left,
+        ...WINDOW_SIZE,
+        ...rest
+      });
+    }
+
+    // shim firefox
+    if (win.left !== left) {
+      await browserWindowsUpdate(win.id!, { left, top });
+    }
+
+    return win.id;
+  } catch (error) {
+    console.error('Notification create error:', error);
+    return undefined;
   }
-
-  // shim firefox
-  if (win.left !== left) {
-    await browserWindowsUpdate(win.id!, { left, top });
-  }
-
-  return win.id;
 };
 
 const remove = async (winId) => {
