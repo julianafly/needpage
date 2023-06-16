@@ -176,6 +176,7 @@ export const AddressInput = (props: InputProps) => {
             handleInputAddress(e);
           }}
           defaultValue={inputVal}
+          spellCheck={false}
           {...rest}
         />
 

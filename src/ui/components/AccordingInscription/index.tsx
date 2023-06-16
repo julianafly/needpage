@@ -8,7 +8,7 @@ export function AccordingInscription({ inscription }: { inscription: Inscription
       text={`By inscription #${inscription.inscriptionNumber}`}
       preset="link"
       onClick={() => {
-        window.open(`https://ordinals.com/inscription/${inscription.inscriptionId}`);
+        window.open(`https://ordinalslite.com/inscription/${inscription.inscriptionId}`);
       }}
     />
   );
