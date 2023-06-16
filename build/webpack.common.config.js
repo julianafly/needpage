@@ -102,7 +102,7 @@ const config = (env) => {
               'primary-color': 'rgb(45,135,246)',
               'primary-color-active': '#35373b',
               'input-icon-hover-color': '#FFFFFF',
-              'component-background': '#2f3740',
+              'component-background': '#161a1f',
               'select-dropdown-bg': '#171a1f',
               'select-item-selected-bg': '#332F2F',
               'select-item-active-bg': '#332F2F',
