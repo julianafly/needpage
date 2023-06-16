@@ -128,14 +128,14 @@ export const ADDRESS_TYPES: {
     displayIndex: 0,
     isUnisatLegacy: false
   },
-  // {
-  //   value: AddressType.P2TR,
-  //   label: 'P2TR',
-  //   name: 'Taproot (P2TR)',
-  //   hdPath: "m/86'/2'/0'/0",
-  //   displayIndex: 2,
-  //   isUnisatLegacy: false
-  // },
+  {
+    value: AddressType.P2TR,
+    label: 'P2TR',
+    name: 'Taproot (P2TR)',
+    hdPath: "m/86'/2'/0'/0",
+    displayIndex: 2,
+    isUnisatLegacy: false
+  },
   {
     value: AddressType.P2SH_P2WPKH,
     label: 'P2SH-P2WPKH',
@@ -152,14 +152,14 @@ export const ADDRESS_TYPES: {
     displayIndex: 4,
     isUnisatLegacy: true
   },
-  // {
-  //   value: AddressType.M44_P2TR,
-  //   label: 'P2TR',
-  //   name: 'Taproot (P2TR)',
-  //   hdPath: "m/44'/2'/0'/0",
-  //   displayIndex: 5,
-  //   isUnisatLegacy: true
-  // }
+  {
+    value: AddressType.M44_P2TR,
+    label: 'P2TR',
+    name: 'Taproot (P2TR)',
+    hdPath: "m/44'/2'/0'/0",
+    displayIndex: 5,
+    isUnisatLegacy: true
+  }
 ];
 
 export const RESTORE_WALLETS: { value: RestoreWalletType; name: string; addressTypes: AddressType[] }[] = [
@@ -169,10 +169,10 @@ export const RESTORE_WALLETS: { value: RestoreWalletType; name: string; addressT
     addressTypes: [
       AddressType.P2WPKH,
       AddressType.P2SH_P2WPKH,
-      // AddressType.P2TR,
+      AddressType.P2TR,
       AddressType.P2PKH,
       AddressType.M44_P2WPKH,
-      // AddressType.M44_P2TR
+      AddressType.M44_P2TR
     ]
   },
   {
@@ -192,9 +192,9 @@ export const RESTORE_WALLETS: { value: RestoreWalletType; name: string; addressT
       AddressType.P2PKH,
       AddressType.P2WPKH,
       AddressType.P2SH_P2WPKH,
-      // AddressType.P2TR,
+      AddressType.P2TR,
       AddressType.M44_P2WPKH,
-      // AddressType.M44_P2TR
+      AddressType.M44_P2TR
     ]
   }
 ];
@@ -266,7 +266,7 @@ export const SATS_DOMAIN = '.lits';
 export const UNISAT_DOMAIN = '.unilit';
 
 export const GITHUB_URL = 'https://github.com/ynohtna92/extension-ltc';
-export const DISCORD_URL = 'https://discord.gg/DTrByWbn';
+export const DISCORD_URL = 'https://discord.gg/litecoinpunks';
 export const TWITTER_URL = 'https://twitter.com/litescribe_io';
 
 export const CHANNEL = process.env.channel!;

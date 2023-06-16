@@ -14,10 +14,10 @@ export default function ReceiveScreen() {
     renderAs: 'svg',
     size: sizes.qrcode,
     imageSettings: {
-      src: 'https://litescribe.io/images/app-litescribe.png', // Replace with the URL of your image
+      src: './images/logo/logo@128x.png', // Replace with the URL of your image
       height: 45, // Adjust the size of the logo as needed
       width: 45,
-      excavate: false // This removes the dark squares in the QR code where the logo is placed
+      excavate: true // This removes the dark squares in the QR code where the logo is placed
     }
   };
 
