@@ -39,6 +39,7 @@ export default function ReceiveScreen() {
               value={address || ''}
               renderAs={'svg' as const} // Specify the type as "svg"
               size={qrCodeOptions.size}
+              level={'M' as const}
               imageSettings={qrCodeOptions.imageSettings}
             />
           </Column>
