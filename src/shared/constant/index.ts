@@ -266,7 +266,7 @@ export const SATS_DOMAIN = '.lits';
 export const UNISAT_DOMAIN = '.unilit';
 
 export const GITHUB_URL = 'https://github.com/ynohtna92/extension-ltc';
-export const DISCORD_URL = 'https://discord.gg/DTrByWbn';
+export const DISCORD_URL = 'https://discord.gg/litecoinpunks';
 export const TWITTER_URL = 'https://twitter.com/litescribe_io';
 
 export const CHANNEL = process.env.channel!;
