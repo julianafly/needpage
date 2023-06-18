@@ -67,7 +67,7 @@ export function useChangeNetworkTypeCallback() {
 export function useBlockstreamUrl() {
   const networkType = useNetworkType();
   if (networkType === NetworkType.MAINNET) {
-    return 'https://explorer.litecoin.net/';
+    return 'https://litepool.space';
   } else {
     return 'https://blockexplorer.one/litecoin/testnet';
   }
@@ -76,7 +76,7 @@ export function useBlockstreamUrl() {
 export function useTxIdUrl(txid: string) {
   const networkType = useNetworkType();
   if (networkType === NetworkType.MAINNET) {
-    return `https://explorer.litecoin.net/tx/${txid}`;
+    return `https://litepool.space/tx/${txid}`;
   } else {
     return `https://blockexplorer.one/litecoin/testnet/tx/${txid}`;
   }
