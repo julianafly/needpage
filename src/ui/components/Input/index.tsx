@@ -2,7 +2,7 @@ import bitcore from 'bitcore-lib';
 import WAValidator from 'multicoin-address-validator';
 import React, { CSSProperties, useEffect, useState } from 'react';
 
-import { SATS_DOMAIN, UNISAT_DOMAIN } from '@/shared/constant';
+import { SATS_DOMAIN, UNISAT_DOMAIN, LTC_DOMAIN, LITE_DOMAIN } from '@/shared/constant';
 import { Inscription } from '@/shared/types';
 import { colors } from '@/ui/theme/colors';
 import { spacing } from '@/ui/theme/spacing';
@@ -138,7 +138,7 @@ export const AddressInput = (props: InputProps) => {
     }
 
     const teststr = inputAddress.toLowerCase();
-    if (teststr.endsWith(SATS_DOMAIN) || teststr.endsWith(UNISAT_DOMAIN)) {
+    if (teststr.endsWith(SATS_DOMAIN) || teststr.endsWith(UNISAT_DOMAIN) || teststr.endsWith(LTC_DOMAIN) || teststr.endsWith(LITE_DOMAIN)) {
       wallet
         .queryDomainInfo(encodeURIComponent(inputAddress))
         .then((inscription) => {
@@ -169,7 +169,7 @@ export const AddressInput = (props: InputProps) => {
     <div style={{ alignSelf: 'stretch' }}>
       <div style={Object.assign({}, $baseContainerStyle, { flexDirection: 'column', minHeight: '56.5px' })}>
         <input
-          placeholder={'Address, name' + SATS_DOMAIN + ', name' + UNISAT_DOMAIN}
+          placeholder={'Address, name' + SATS_DOMAIN + ', name' + UNISAT_DOMAIN + ' and more...'}
           type={'text'}
           style={Object.assign({}, $baseInputStyle, $inputStyleOverride)}
           onChange={async (e) => {
